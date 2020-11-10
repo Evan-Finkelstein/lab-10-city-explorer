@@ -1,7 +1,7 @@
 require('dotenv').config();
 require('./lib/client').connect();
 
-const app = require('./lib/app');
+const app = require('./lib/app.js');
 
 const PORT = process.env.PORT || 7890;
 
