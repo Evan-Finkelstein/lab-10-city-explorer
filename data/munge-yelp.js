@@ -1,8 +1,12 @@
-function mungeYelp(weatherData) {
-    let returnArray = weatherData.data.map(weather => {
+function mungeYelp(yelpData) {
+    let returnArray = yelpData.businesses.map(yelp => {
         return {
-            forecast: weather.weather.description,
-            time: weather.datetime,
+            name: yelp.name,
+            image_url: yelp.image_url,
+            price: yelp.price,
+            rating: yelp.rating,
+            url: yelp.url,
+
         }
     })
     return returnArray;
